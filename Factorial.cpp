@@ -11,6 +11,8 @@ int fac(long long int a){
 int main(){
     int n;
     cin>>n;
+    // Answer to the  question No.6
+
     cout<< fac(n);
     return 0;
 }
