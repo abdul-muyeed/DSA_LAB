@@ -29,6 +29,13 @@ void display(node* &head){
 }
 void remove(node* &head){
     node* temp = head;
+    if(head->next == NULL){
+        head = NULL;
+        return;
+    }else if(head == NULL){
+        cout<<"Stack is empty"<<endl;
+        return;
+    }
     while(temp->next->next != NULL){
         temp = temp->next;
     }
