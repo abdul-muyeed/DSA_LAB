@@ -125,15 +125,58 @@ string infixtoPostfix(string &infix){
    
 }
 
+int postfixtoSum(string &str){
+    stack<int> s;
+    for(char c:str){
+        // cout<<s.top()<<endl;
+        if(isOparetor(c)){
+            int b =s.top();
+            s.pop();
+            int a =s.top();
+            s.pop();
+            int k;
+            if(c=='+'){
+                k=a+b;
+            }else if(c=='-'){
+                k=a-b;
+            }else if(c=='/'){
+                k=a/b;
+            }else if(c=='^'){
+                k = (int) pow(a,b);
+            }else{
+                k=a*b;
+            }
+            s.push(k);
+
+        }else{
+            if(c=='a'){
+                s.push(3);
+            }else if(c=='b'){
+                s.push(2);
+            }else if(c=='c'){
+                s.push(1);
+            }else{
+                s.push(c-'0');
+            }
+            
+        }
+    }
+    return s.top();
+}
+
 
 
 
 
 int main(){
     string infix = "(5+3)*2-(7/2)+(4^3)";
+    // Answer to the  question No.4
     string postfix = infixtoPostfix(infix);
+    // Answer to the  question No.3 and 5
+    int sum = postfixtoSum(postfix);
     //string postfix = infixtoPostfix("a+b*c");
     cout<<postfix<<endl;
+    cout<<sum<<endl;
    
 
     return 0;
