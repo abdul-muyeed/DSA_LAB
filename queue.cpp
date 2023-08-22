@@ -65,20 +65,20 @@ int main(){
     while(1){
         cin>>s;
         if(s=="bpush"){
-            // Answer to the  question No.1
+            // Answer to the  question No.9
             int a;
             cin>>a;
             insertB(head, a);
         }else if(s=="fpush"){
-            // Answer to the  question No.1
+            // Answer to the  question No.9
             int a;
             cin>>a;
             insertF(head, a);
         }else  if(s=="bpop"){
-            // Answer to the  question No.2
+            // Answer to the  question No.10
             removeB(head);
         }else  if(s=="fpop"){
-            // Answer to the  question No.2
+            // Answer to the  question No.10
             removeF(head);
         }else if(s=="show"){
             display(head);
