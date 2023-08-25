@@ -4,7 +4,6 @@ const int N = 1000;
 int arr[N]={0};
 
 void insert(int num, int index){
-    
     if(arr[index] == 0){
         cout<<index<<" ";
         
@@ -34,7 +33,7 @@ bool find(int num, int index){
 int main(){
 
     int n=7, a[n]={11,77,44,33,55,99,66};
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n; i++)
     {
         cout<<"insert: "<<a[i]<<endl;
         insert(a[i],0);
